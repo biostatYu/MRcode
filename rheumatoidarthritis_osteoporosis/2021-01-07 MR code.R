@@ -83,7 +83,34 @@
 		fit=mr_presso(BetaOutcome="BETA.y",BetaExposure="BETA.x",SdOutcome="SE.y",SdExposure="SE.x",
 			OUTLIERtest=TRUE,DISTORTIONtest=TRUE,data=yx,NbDistribution=10000,SignifThreshold=0.05)
 
-
+	#-------------------------Multivariable MR-----------------------#
+		library(data.table)
+		library(MendelianRandomization)
+		m=c("Asthma","Crohn_disease","Inflammatory_bowel_disease","MultipleSclerosi","systemic_lupus_erythematosus","T1D","Ulcerative_colitis")
+		library(data.table)
+		mm = length(m)
+		rex = matrix(NA, mm, 5)
+		rex.2 = matrix(NA, mm, 5)
+		yx0 = data.frame(fread(paste("index_snp_BMD_Rheumatoid_Arthritis.txt",sep = ""),sep='\t',head=T))
+		snp=yx0$SNP
+		for (i in 1:mm){
+			x0 = data.frame(fread(paste(m[i],".txt",sep=""),sep='\t',head=T))
+			ax1=x0[which(x0$SNP%in%snp),]
+			yx1=merge(yx0,ax1,by="SNP",all.x=T)
+			index1=which(toupper(yx1$INC_ALLELE.x)==toupper(yx1$INC_ALLELE))
+			if (length(index1)<length(yx1$INC_ALLELE.x)){yx1$BETA[-index1]=yx1$BETA[-index1]*(-1)}
+			yx=na.omit(yx1)
+			fit = mr_mvivw(mr_mvinput(bx = cbind(yx$BETA.x, yx$BETA), bxse = cbind(yx$SE.x, yx$SE),
+			   by = yx$BETA.y, byse = yx$SE.y))
+			res = cbind(fit$Estimate,fit$StdError,fit$CILower,fit$CIUpper,fit$Pvalue)
+			rex[i,] = res[1,]
+			rex.2[i,] = res[2,]
+			print(i)
+		}
+		colnames(rex) = c("BETA","SE","Low","Up","P")
+		colnames(rex.2) = c("BETA","SE","Low","Up","P")
+		write.table(cbind(m,rex),paste("multivariable_RA_main.txt",sep = ""),quote=F,sep="\t",col.names=F,row.names=F)
+		write.table(cbind(m,rex.2),paste("multivariable_RA_covarites.txt",sep = ""),quote=F,sep="\t",col.names=F,row.names=F)
 
 
 #--------------------------reverse------------------------------#	
@@ -150,7 +177,7 @@
 		}
 		fwrite(data.frame(gx),"Genotype_ra.txt", row.names = F, col.names = T,quote = F, sep = "\t")
 		
-		# merge 33IDÓë48ID
+		# merge 33IDÃ“Ã«48ID
 		gx = data.frame(fread("Genotype_ra.txt", header = T))
 		temp = data.frame(fread("chr_1.fam", header = F))
 		data = merge(temp, gx, by.x="V1", by.y="FID", all.x = T)
@@ -296,8 +323,8 @@
 
 #-------------------------------------data process-------------------------------------#
 	library(MendelianRandomization)
-	#DD0 ½á¾Ö
-	#ax0 ±©Â¶
+	#DD0 Â½Ã¡Â¾Ã–
+	#ax0 Â±Â©Ã‚Â¶
 	#snp index_exposure(vector)
 
 	MR_process = function(DD0,ax0,snp){
