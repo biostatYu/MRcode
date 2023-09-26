@@ -1,0 +1,53 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -V
+#$ -N ldsc_analysis
+#$ -j y
+#$ -q all
+#$ -l mem=25G
+
+bash
+export PATH="/home/yuxinghao/anaconda3/bin:$PATH"
+source activate ldsc
+let k=0
+ldsc=/home/yuxinghao/software/ldsc/ldsc.py
+for dx in Blood_B_ALL_2019NC; do
+for ex in AD_Asthma_adultonset_2019AJHG_maf_GRCh37 AD_Asthma_childonset_2019AJHG_maf_GRCh37 AD_Crohn_disease_2017LangeNG AD_Graves_disease_2021Sakaue AD_Hashimoto_Disease_2021Sakaue AD_Hypothyroidism_2021Sakaue AD_Inflammatory_bowel_disease_2017LangeNG AD_Multiple_Sclerosis_2018_qc AD_PBC_2021Cordell AD_Pernicious_Anemia AD_Primary_sclerosing_cholangitis2016 AD_Rheumatoid_Arthritis_European_2022_NG AD_Rheumatoid_Arthritis_pos_European_2022_NG AD_Systemic_Lupus_Erythematosus_2015_NG AD_systemic_sclerosis AD_T1D_2020_Diabetes AD_Ulcerative_Colitis_2017LangeNG AD_vitiligo_NG_2016; do
+let k=${k}+1
+if [ ${k} -eq ${SGE_TASK_ID} ]; then
+home=/data/Summarydata/ldsc
+mkdir -p /data/Summarydata/ldsc/results/BALL/${dx}_${ex}
+cd /data/Summarydata/ldsc/results/BALL/${dx}_${ex}
+${ldsc} \
+	--rg ${home}/ldsc_${dx}.txt.gz,${home}/ldsc_${ex}.txt.gz \
+	--ref-ld-chr /data/ref/eur_w_ld_chr/ \
+	--w-ld-chr   /data/ref/eur_w_ld_chr/ \
+	--frqfile-chr /data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--no-intercept \
+	--out ./${dx}_${ex}_hapmap3_nointercept
+${ldsc} \
+	--rg ${home}/ldsc_${dx}.txt.gz,${home}/ldsc_${ex}.txt.gz \
+	--ref-ld-chr /data/ref/eur_w_ld_chr/ \
+	--w-ld-chr   /data/ref/eur_w_ld_chr/ \
+	--frqfile-chr /data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--out ./${dx}_${ex}_hapmap3_withintercept
+${ldsc} \
+	--rg ${home}/ldsc_${dx}.txt.gz,${home}/ldsc_${ex}.txt.gz \
+	--ref-ld-chr /data/ref/1000G_Phase3_baselineLD_v2.2_ldscores/ \
+	--w-ld-chr   /data/ref/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. \
+	--frqfile-chr /data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--no-intercept \
+	--out ./${dx}_${ex}_1000G_nointercept
+${ldsc} \
+	--rg ${home}/ldsc_${dx}.txt.gz,${home}/ldsc_${ex}.txt.gz \
+	--ref-ld-chr /data/ref/1000G_Phase3_baselineLD_v2.2_ldscores/ \
+	--w-ld-chr   /data/ref/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. \
+	--frqfile-chr /data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--out ./${dx}_${ex}_1000G_withintercept
+fi
+done
+done

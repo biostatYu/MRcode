@@ -1,0 +1,510 @@
+{
+ "name": "B-ALL",
+ "children": [
+  {
+   "name": "AOA",
+   "children": [
+	{
+	 "name": "2q22.3",
+	 "children": [
+	  {"name": "RPL6P5", "value": 3534},
+	  {"name": "AC092484.1", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "5q31.1",
+	 "children": [
+	  {"name": "C5orf56", "value": 3534}
+	 ]
+	},
+	{
+	 "name": "7p12.2",
+	 "children": [
+	  {"name": "IKZF1", "value": 7074},
+	  {"name": "RNU6-1091P", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "9p24.1",
+	 "children": [
+	  {"name": "RP11-218I7.2", "value": 7074},
+	  {"name": "RP11-575C20.1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p14",
+	 "children": [
+	  {"name": "GATA3", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10p14",
+	 "children": [
+	  {"name": "RP11-428L9.1", "value": 7074},
+	  {"name": "RP11-428L9.2", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "12q13.3",
+	 "children": [
+	  {"name": "STAT6", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "19q13.11",
+	 "children": [
+	  {"name": "SLC7A10", "value": 7074},
+	  {"name": "CTD-2540B15.12", "value": 3416}
+	 ]
+	}
+   ]
+  }, 
+  {
+   "name": "HT",
+   "children": [
+	{
+	 "name": "2q32.3",
+	 "children": [
+	  {"name": "STAT4", "value": 3534}
+	 ]
+	},
+	{
+	 "name": "4q31.23",
+	 "children": [
+	  {"name": "RP11-503L19.1", "value": 3534},
+	  {"name": "ATP5LP4", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "6q23.3",
+	 "children": [
+	  {"name": "HBS1L", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "6q27",
+	 "children": [
+	  {"name": "RP1-167A14.2", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "8q24.21",
+	 "children": [
+	  {"name": "AC068570.1", "value": 7074},
+	  {"name": "LINC00977", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "8q24.22",
+	 "children": [
+	  {"name": "TG", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p12.2",
+	 "children": [
+	  {"name": "PIP4K2A", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10q21.2",
+	 "children": [
+	  {"name": "RP11-120C12.3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "13q12.12",
+	 "children": [
+	  {"name": "SPATA13", "value": 3416},
+	  {"name": "RP11-307N16.6", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "15q14",
+	 "children": [
+	  {"name": "RASGRP1", "value": 3416},
+	  {"name": "RP11-275I4.2", "value": 3416}
+	 ]
+	}
+   ]
+  }, 
+  {
+   "name": "PBC",
+   "children": [
+	{
+	 "name": "2q32.2",
+	 "children": [
+	  {"name": "AC006460.2", "value": 3534},
+	  {"name": "AC005540.3", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "3q13.33",
+	 "children": [
+	  {"name": "ARHGAP31", "value": 3534}
+	 ]
+	},
+	{
+	 "name": "3q25.33",
+	 "children": [
+	  {"name": "IQCJ-SCHIP1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "4q24",
+	 "children": [
+	  {"name": "NFKB1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "5p13.2",
+	 "children": [
+	  {"name": "CAPSL", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "6p21.31",
+	 "children": [
+	  {"name": "BAK1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "7p12.1",
+	 "children": [
+	  {"name": "IKZF1", "value": 7074},
+	  {"name": "RNU6-1091P", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p12.31",
+	 "children": [
+	  {"name": "ADIPOR1P1", "value": 7074},
+	  {"name": "EBLN1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "14q32.12",
+	 "children": [
+	  {"name": "RIN3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "17q12",
+	 "children": [
+	  {"name": "TCAP", "value": 3416}
+	 ]
+	}
+   ]
+  }, 
+  {
+   "name": "IBD",
+   "children": [
+	{
+	 "name": "1p36.12",
+	 "children": [
+	  {"name": "RP11-415K20.1", "value": 3534},
+	  {"name": "ZBTB40", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "5q31.1",
+	 "children": [
+	  {"name": "snoZ6", "value": 3534},
+	  {"name": "AC063976.1", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "5q33.1",
+	 "children": [
+	  {"name": "AC010441.1", "value": 7074},
+	  {"name": "IRGM", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "6q21",
+	 "children": [
+	  {"name": "TRAF3IP2", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "6q27",
+	 "children": [
+	  {"name": "RP1-167A14.2", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "7p12.2",
+	 "children": [
+	  {"name": "AC020743.4", "value": 7074},
+	  {"name": "IKZF1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "7q31.1",
+	 "children": [
+	  {"name": "PIGCP2", "value": 7074},
+	  {"name": "DLD", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p14",
+	 "children": [
+	  {"name": "GATA3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p12.31",
+	 "children": [
+	  {"name": "ADIPOR1P1", "value": 3534},
+	  {"name": "EBLN1", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "10q24.2",
+	 "children": [
+	  {"name": "RP11-441O15.3", "value": 3534},
+	  {"name": "RP11-129J12.2", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "10q26.13",
+	 "children": [
+	  {"name": "METTL10", "value": 7074},
+	  {"name": "RP11-12J10.3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "16p11.2",
+	 "children": [
+	  {"name": "SULT1A12", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "17q12",
+	 "children": [
+	  {"name": "ZPBP2", "value": 7074},
+	  {"name": "GSDMB", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "19q13.11",
+	 "children": [
+	  {"name": "SLC7A10", "value": 7074},
+	  {"name": "CTD-2540B15.12", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "20q13.33",
+	 "children": [
+	  {"name": "RTEL1-TNFRSF6B", "value": 7074},
+	  {"name": "RTEL1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "21q21.1",
+	 "children": [
+	  {"name": "AJ006998.2", "value": 3416},
+	  {"name": "CYCSP42", "value": 3416}
+	 ]
+	}
+   ]
+  }, 
+  {
+   "name": "CD",
+   "children": [
+	{
+	 "name": "5q31.1",
+	 "children": [
+	  {"name": "IRF1", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "5q33.1",
+	 "children": [
+	  {"name": "ZNF300P1", "value": 3534}
+	 ]
+	},
+	{
+	 "name": "6q27",
+	 "children": [
+	  {"name": "RP11-517H2.6", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "7p12.2",
+	 "children": [
+	  {"name": "AC020743.4", "value": 7074},
+	  {"name": "IKZF1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "9p21.3",
+	 "children": [
+	  {"name": "CDKN2B-AS1", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10p12.31",
+	 "children": [
+	  {"name": "ADIPOR1P1", "value": 7074},
+	  {"name": "EBLN1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "16p11.2",
+	 "children": [
+	  {"name": "SULT1A1", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "17q12",
+	 "children": [
+	  {"name": "AC005549.3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "19q13.11",
+	 "children": [
+	  {"name": "SLC7A10", "value": 3416},
+	  {"name": "CTD-2540B15.12", "value": 1561}
+	 ]
+	},
+	{
+	 "name": "21q21.1",
+	 "children": [
+	  {"name": "AC005549.3", "value": 2373}
+	 ]
+	}
+   ]
+  },
+  {
+   "name": "RA",
+   "children": [
+	{
+	 "name": "2q11.2",
+	 "children": [
+	  {"name": "LINC01104", "value": 3534},
+	  {"name": "LONRF2", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "2q32.3",
+	 "children": [
+	  {"name": "STAT4", "value": 3534}
+	 ]
+	},
+	{
+	 "name": "6p21.31",
+	 "children": [
+	  {"name": "BAK1", "value": 5433}
+	 ]
+	},
+	{
+	 "name": "6q27",
+	 "children": [
+	  {"name": "RP11-517H2.6", "value": 4835}
+	 ]
+	},
+	{
+	 "name": "7p12.1",
+	 "children": [
+	  {"name": "GRB10", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "9p21.3",
+	 "children": [
+	  {"name": "CDKN2B-AS1", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10p14",
+	 "children": [
+	  {"name": "GATA3", "value": 5435}
+	 ]
+	},
+	{
+	 "name": "10p12.2",
+	 "children": [
+	  {"name": "PIP4K2A", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10q21.2",
+	 "children": [
+	  {"name": "ARID5B", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "11q23.3",
+	 "children": [
+	  {"name": "Y_RNA", "value": 3416},
+	  {"name": "CXCR5", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "13q12.2",
+	 "children": [
+	  {"name": "FLT3", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "17q12",
+	 "children": [
+	  {"name": "IKZF3", "value": 3416}
+	 ]
+	}
+   ]
+  }, 
+  {
+   "name": "MS",
+   "children": [
+	{
+	 "name": "1p13.1",
+	 "children": [
+	  {"name": "RP5-1086K13.1", "value": 5731}
+	 ]
+	},
+	{
+	 "name": "6q23.3",
+	 "children": [
+	  {"name": "HBS1L", "value": 3534},
+	  {"name": "MYB", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "7p12.2",
+	 "children": [
+	  {"name": "AC020743.4", "value": 7074},
+	  {"name": "IKZF1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "8q21.12",
+	 "children": [
+	  {"name": "ZC2HC1A", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "10p14",
+	 "children": [
+	  {"name": "GATA3", "value": 7074}
+	 ]
+	},
+	{
+	 "name": "10p12.31",
+	 "children": [
+	  {"name": "ADIPOR1P1", "value": 7074},
+	  {"name": "EBLN1", "value": 3416}
+	 ]
+	},
+	{
+	 "name": "21q22.2",
+	 "children": [
+	  {"name": "ERG", "value": 3416}
+	 ]
+	}
+   ]
+  }
+ ]
+}

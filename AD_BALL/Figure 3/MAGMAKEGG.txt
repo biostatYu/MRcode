@@ -1,0 +1,65 @@
+group	gene set	ngenes	beta	beta_std	se	p	pbon
+AOA	gobp mononuclear cell differentiation	433	0.22731	0.034606	0.04297	6.19E-08	0.001052622
+AOA	wp inflammatory bowel disease signaling	39	0.7302	0.03373	0.14644	3.11E-07	0.005283712
+AOA	gobp post embryonic development	84	0.48067	0.032545	0.097919	4.63E-07	0.007863473
+AOA	gomf nadplus nucleosidase activity	14	1.5285	0.042332	0.31478	6.05E-07	0.01028228
+AOA	ono aml1 targets dn	36	0.72811	0.032316	0.15234	8.86E-07	0.015068424
+AOA	gomf interleukin 1 receptor activity	6	2.1316	0.038655	0.4475	9.60E-07	0.01632131
+AOA	gobp leukocyte differentiation	555	0.18012	0.030938	0.038056	1.12E-06	0.018960154
+AOA	gobp adaptive immune response	384	0.21846	0.031363	0.046779	1.52E-06	0.025798228
+AOA	gobp myeloid leukocyte activation	217	0.27726	0.030062	0.059614	1.67E-06	0.028305173
+HT	gobp leukocyte differentiation	559	0.23324	0.040132	0.038264	5.58E-10	9.48E-06
+HT	gobp hemopoiesis	851	0.18158	0.038231	0.03083	1.97E-09	3.35E-05
+HT	gobp mononuclear cell differentiation	437	0.25228	0.038511	0.043387	3.10E-09	5.26E-05
+HT	gobp lymphocyte activation	697	0.18519	0.035442	0.034198	3.10E-08	0.000527799
+HT	wp development of pulmonary dendritic cells and macrophage subsets	13	1.1442	0.030482	0.24983	2.34E-06	0.039789559
+HT	gobp t cell differentiation	282	0.24372	0.030017	0.053414	2.54E-06	0.043200417
+PBC	farmer breast cancer cluster 8	6	2.5319	0.048068	0.44931	8.91E-09	0.000151345
+PBC	gobp positive regulation of lymphocyte differentiation	111	0.41458	0.033746	0.085825	6.88E-07	0.011684719
+PBC	gobp mononuclear cell differentiation	396	0.22326	0.034028	0.046636	8.53E-07	0.01449961
+PBC	nikolsky overconnected in breast cancer	20	1.0004	0.034662	0.21121	1.10E-06	0.018632933
+PBC	pid il12 2pathway	53	0.58233	0.032811	0.12456	1.48E-06	0.025192988
+PBC	gobp positive regulation of hemopoiesis	158	0.33456	0.032445	0.072782	2.16E-06	0.036751839
+PBC	wp extrafollicular and follicular b cell activation by sarscov2	58	0.56163	0.033099	0.12298	2.50E-06	0.042425033
+IBD	basso cd40 signaling up	83	0.51712	0.034898	0.099807	1.12E-07	0.001896515
+IBD	gobp mononuclear cell differentiation	432	0.21974	0.033504	0.043088	1.72E-07	0.002922134
+IBD	pid tgfbr pathway	52	0.68084	0.036399	0.13391	1.87E-07	0.003171537
+IBD	gobp leukocyte differentiation	552	0.18989	0.032616	0.038405	3.86E-07	0.0065552
+IBD	wp inflammatory bowel disease signaling	39	0.73648	0.034111	0.15299	7.47E-07	0.012698593
+IBD	gobp positive regulation of leukocyte cell cell adhesion	231	0.28327	0.031761	0.059226	8.72E-07	0.014817157
+IBD	gobp second messenger mediated signaling	260	0.26336	0.031302	0.055257	9.47E-07	0.016100238
+IBD	wp extrafollicular and follicular b cell activation by sarscov2	63	0.55146	0.032442	0.11585	9.76E-07	0.016592855
+IBD	gobp lymphocyte activation	688	0.16319	0.031172	0.034702	1.30E-06	0.022010225
+IBD	nikolsky breast cancer 17q11 q21 amplicon	106	0.68266	0.05203	0.14623	1.53E-06	0.026002519
+IBD	gobp positive regulation of immune system process	870	0.13968	0.029847	0.030474	2.30E-06	3.91E-02
+IBD	gobp cell activation	975	0.13252	0.029885	0.029187	2.83E-06	4.81E-02
+CD	gobp mononuclear cell differentiation	432	0.24408	0.037217	0.042948	6.73E-09	0.000114401
+CD	wp inflammatory bowel disease signaling	39	0.85093	0.039415	0.15262	1.25E-08	0.000213171
+CD	gobp leukocyte differentiation	552	0.20051	0.034444	0.038284	8.24E-08	0.001400848
+CD	gobp positive regulation of molecular function	1341	0.12757	0.03338	0.024558	1.04E-07	0.0017646
+CD	gobp regulation of catalytic activity	1625	0.1122	0.032042	0.022641	3.64E-07	0.006195796
+CD	gobp hemopoiesis	843	0.15121	0.031832	0.03066	4.11E-07	0.006989918
+CD	basso cd40 signaling up	83	0.4816	0.032504	0.099325	6.27E-07	0.010659839
+CD	wp extrafollicular and follicular b cell activation by sarscov2	63	0.54744	0.032207	0.11531	1.04E-06	0.017663943
+CD	gobp positive regulation of catalytic activity	971	0.13702	0.030843	0.028953	1.12E-06	0.019003809
+CD	gobp positive regulation of immune system process	870	0.14179	0.030299	0.030314	1.47E-06	0.024909805
+CD	reactome signaling by interleukins	414	0.20316	0.030341	0.043542	1.55E-06	4.18E-02
+CD	reactome interleukin 23 signaling	9	1.5439	0.034382	0.33958	2.75E-06	4.67E-02
+CD	gobp response to cytokine	817	0.14427	0.029922	0.031753	2.79E-06	4.74E-02
+RA	gobp mononuclear cell differentiation	437	0.24047	0.03672	0.043099	1.23E-08	0.000208355
+RA	gobp b cell differentiation	140	0.41926	0.036537	0.078384	4.49E-08	0.00076288
+RA	gobp lymphocyte activation	697	0.16776	0.032116	0.033867	3.68E-07	0.006262318
+RA	gobp cell activation	982	0.13955	0.031454	0.028511	4.97E-07	0.00844883
+RA	gobp b cell activation	254	0.27944	0.032699	0.057942	7.14E-07	0.012141876
+RA	wp genes associated with the development of rheumatoid arthritis	17	0.98415	0.029988	0.20413	7.20E-07	0.01224196
+RA	gobp cell activation involved in immune response	278	0.26081	0.031906	0.054704	9.40E-07	0.01597752
+RA	gobp leukocyte differentiation	559	0.18034	0.031039	0.03833	1.28E-06	0.021761678
+RA	gobp lymphocyte activation involved in immune response	194	0.30443	0.031184	0.066341	2.25E-06	0.038165672
+MS	gobp negative regulation of biosynthetic process	1415	0.12793	0.034262	0.024318	7.26E-08	0.001234231
+MS	basso cd40 signaling up	84	0.50763	0.034412	0.097143	8.79E-08	0.001494221
+MS	gobp negative regulation of rna biosynthetic process	1133	0.14177	0.03426	0.027215	9.59E-08	0.001629733
+MS	gobp negative regulation of nucleobase containing compound metabolic process	1343	0.12761	0.033366	0.02492	1.54E-07	0.00261834
+MS	gobp hemopoiesis	844	0.15711	0.033045	0.030923	1.90E-07	0.00322896
+MS	gobp second messenger mediated signaling	260	0.26941	0.031975	0.055592	6.35E-07	0.01079509
+MS	zheng bound by foxp3	472	0.20584	0.032722	0.042602	6.83E-07	0.011600962
+MS	gobp mononuclear cell differentiation	432	0.21007	0.031983	0.043826	8.28E-07	0.014077617

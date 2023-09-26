@@ -1,0 +1,29 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -V
+#$ -N ldsc
+#$ -j y
+#$ -q all
+#$ -l mem=25G
+
+bash
+export PATH="/home/yuxinghao/anaconda3/bin:$PATH"
+source activate ldsc
+let k=0
+ldsc=/home/yuxinghao/software/ldsc/ldsc.py
+home=/data/Summarydata/ldsc
+ref=/data/ref
+for dx in Blood_B_ALL_2019NC; do
+for cts in ImmGen Corces_ATAC Cahoy Multi_tissue_gene_expr; do
+let k=${k}+1
+if [ ${k} -eq ${SGE_TASK_ID} ]; then
+cd /data/ref/tissue_cell_specific_ldscores
+${ldsc} \
+	--h2-cts ${home}/ldsc_${dx}.txt.gz \
+	--ref-ld-chr ${ref}/1000G_Phase3_baselineLD_ldscores/baselineLD. \
+	--ref-ld-chr-cts ${ref}/tissue_cell_specific_ldscores/${cts}.ldcts \
+	--w-ld-chr ${ref}/weights_hm3_no_hla/weights. \
+	--out /data/Summarydata/ldsc/results/cell_type/AD_BALL_${dx}_${cts}
+fi
+done
+done
