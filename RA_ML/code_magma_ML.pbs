@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N HESS_step1
+#PBS -k oe
+#PBS -q master
+#PBS -l walltime=100:00:00
+#PBS -l nodes=1:ppn=1
+
+cd $PBS_O_WORKDIR
+
+bash
+export PATH="/home/yxh/software/anaconda3/bin:$PATH"
+source activate hess
+hess=/home/yxh/software/hess-0.5.3-beta/hess.py
+home=/home/yxh/data/Summarydata/A_result_hess
+let k=0
+for dx in Metabolism_VitaminD_AJHG2020_GRCh37_qc; do
+for ex in AD_Multiple_Sclerosis_2018_qc; do
+for chrom in $(seq 22); do
+let k=${k}+1
+if [ ${k} -eq ${PBS_ARRAYID} ]; then
+mkdir -p /home/yxh/data/Summarydata/A_result_hess/results/step1/${dx}_${ex}
+cd /home/yxh/data/Summarydata/A_result_hess/results/step1/${dx}_${ex}
+python2 ${hess} \
+	--local-rhog ${home}/hess_${dx}.txt ${home}/hess_${ex}.txt \
+	--chrom $chrom \
+	--bfile /home/data/ref/1kg_eur_1pct/1kg_eur_1pct_chr$chrom \
+	--partition /home/data/ref/hess/hess_genome_partition/fourier_ls-chr$chrom.bed \
+	--out step1
+fi
+done
+done
+done

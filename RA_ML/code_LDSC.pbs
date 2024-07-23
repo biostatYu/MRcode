@@ -1,0 +1,41 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N ldsc
+#PBS -k oe
+#PBS -q master
+#PBS -l walltime=100:00:00
+#PBS -l nodes=1:ppn=1
+
+cd $PBS_O_WORKDIR
+
+
+bash
+export PATH=/home/yxh/software/anaconda3/bin:$PATH
+source activate ldsc
+let k=0
+ldsc=/home/yxh/software/ldsc/ldsc.py
+for dx in ldsc_AD_Rheumatoid_Arthritis_pos_European_2022_NG; do
+for ex in ldsc_Blood_Pheweb_EUR_Malignant_lymphoma ldsc_Blood_finnUKBB_C3_CLL_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_C3_DLBCL_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_CD2_FOLLICULAR_LYMPHOMA_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_CD2_HODGKIN_LYMPHOMA_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_CD2_TNK_LYMPHOMA_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_CD2_NONFOLLICULAR_LYMPHOMA_EXALLC_GRCh37_qc ldsc_Blood_finnUKBB_CD2_NONHODGKIN_NAS_EXALLC_GRCh37_qc; do
+let k=${k}+1
+if [ ${k} -eq ${PBS_ARRAYID} ]; then
+home=/home/yxh/data/Summarydata/A_result_LDSC
+mkdir -p /home/yxh/data/Summarydata/A_result_LDSC/results/RA_ML/${dx}_${ex}
+cd /home/yxh/data/Summarydata/A_result_LDSC/results/RA_ML/${dx}_${ex}
+${ldsc} \
+	--rg ${home}/${dx}.txt.gz,${home}/${ex}.txt.gz \
+	--ref-ld-chr /home/data/ref/eur_w_ld_chr/ \
+	--w-ld-chr   /home/data/ref/eur_w_ld_chr/ \
+	--frqfile-chr /home/data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--no-intercept \
+	--out ./${dx}_${ex}_hapmap3_nointercept
+${ldsc} \
+	--rg ${home}/${dx}.txt.gz,${home}/${ex}.txt.gz \
+	--ref-ld-chr /home/data/ref/eur_w_ld_chr/ \
+	--w-ld-chr   /home/data/ref/eur_w_ld_chr/ \
+	--frqfile-chr /home/data/ref/1000G_Phase3_frq/1000G.EUR.QC. \
+	--chisq-max 5000.0 \
+	--out ./${dx}_${ex}_hapmap3_withintercept
+fi
+done
+done

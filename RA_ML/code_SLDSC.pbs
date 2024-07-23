@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N sldsc
+#PBS -k oe
+#PBS -t 1-21%12
+#PBS -q master
+#PBS -l walltime=100:00:00
+#PBS -l nodes=1:ppn=1
+
+cd $PBS_O_WORKDIR
+
+bash
+export PATH=/home/yxh/software/anaconda3/bin:$PATH
+source activate ldsc
+let k=0
+ldsc=/home/yxh/software/ldsc/ldsc.py
+home=/home/yxh/data/Summarydata/A_result_LDSC/PLACO
+ref=/home/data/ref
+for dx in RA_ML_AD_Rheumatoid_Arthritis_pos_European_2022_NG_Blood_C3_DLBCL_EXALLC_meta_out_finnUKBB_GRCh37_qc RA_ML_AD_Rheumatoid_Arthritis_pos_European_2022_NG_Blood_CD2_HODGKIN_LYMPHOMA_EXALLC_meta_out_finnUKBB_GRCh37_qc RA_ML_AD_Rheumatoid_Arthritis_pos_European_2022_NG_Blood_CD2_NONFOLLICULAR_LYMPHOMA_EXALLC_meta_out_finnUKBB_GRCh37_qc RA_ML_AD_Rheumatoid_Arthritis_pos_European_2022_NG_Blood_CD2_NONHODGKIN_NAS_EXALLC_meta_out_finnUKBB_GRCh37_qc RA_ML_AD_Rheumatoid_Arthritis_pos_European_2022_NG_Blood_Pheweb_EUR_Malignant_lymphoma; do
+for cts in ImmGen Multi_tissue_gene_expr; do
+let k=${k}+1
+if [ ${k} -eq ${PBS_ARRAYID} ]; then
+cd ${ref}/tissue_cell_specific_ldscores
+python2 ${ldsc} \
+	--h2-cts ${home}/ldsc_${dx}.txt.gz \
+	--ref-ld-chr ${ref}/1000G_Phase3_baselineLD_v2.2_ldscores/ \
+	--ref-ld-chr-cts ${ref}/tissue_cell_specific_ldscores/${cts}.ldcts \
+	--w-ld-chr ${ref}/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. \
+	--out /home/yxh/data/Summarydata/A_result_LDSC/cell-type/results/placo_${dx}_${cts}
+fi
+done
+done
+

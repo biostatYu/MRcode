@@ -1,0 +1,28 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N HESS_step1
+#PBS -k oe
+#PBS -q master
+#PBS -l walltime=100:00:00
+#PBS -l nodes=1:ppn=1
+
+cd $PBS_O_WORKDIR
+
+bash
+MAGMA=/home/yxh/software/MAGMA/magma
+ref=/home/data/ref/Magma_ref
+home=/data/summarydata/AD
+output=/data/summarydata/AD/Magma
+let k=0
+for dx in Metabolism_VitaminD_AJHG2020_GRCh37_qc; do
+for ex in AD_Multiple_Sclerosis_2018_qc; do
+for chrom in $(seq 22); do
+let k=${k}+1
+if [ ${k} -eq ${PBS_ARRAYID} ]; then
+cd /data/summarydata/AD/Magma
+${MAGMA} --bfile ${ref}/g1000_eur --pval ${home}/${dx}.txt ncol=N --gene-annot ${ref}/G1000_EUR_gene_Annotated_VEGAS_10.genes.annot --out ${output}/${dx}
+${MAGMA} --gene-results ${output}/${dx}.genes.raw --set-annot ${ref}/biosystems20160324_vegas2pathSYM_MAGMA.txt --out ${output}/${dx}
+fi
+done
+done
+done
