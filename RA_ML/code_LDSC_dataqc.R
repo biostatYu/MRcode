@@ -43,3 +43,4 @@ for (j in REP){
 	fwrite(data.frame(maxx),paste("ldsc_",dx[j],".txt.gz",sep=""),quote=F,sep='\t',col.names=T,row.names=F)
 	print(j)
 }
+
